@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Photo {{ photo.id }}</h1>
+    <img src="{{ photo.image.url }}" style="max-width:600px;">
+    <p><a href="{% url 'photo_list' %}">Back to list</a></p>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>All Photos</h1>
+    <p><a href="{% url 'upload_photo' %}">Upload new</a></p>
+    <ul>
+      {% for p in photos %}
+        <li>
+          <a href="{% url 'photo_detail' p.pk %}">Photo {{ p.pk }}</a>
+          — {{ p.created }}
+        </li>
+      {% empty %}
+        <li>No photos yet.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
